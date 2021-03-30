@@ -56,9 +56,10 @@ const questions = () => {
         ])
 }
 
-var badge;
-
 const badgeLicence = (response) => {
+    
+    var badge;
+
     if (response.licence == "GNU AGPLv3") {
         badge = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
     }
@@ -86,31 +87,33 @@ const badgeLicence = (response) => {
     return badge;
 };
 
-const createReadme = (response) =>
-   `# ${response.title}
-    ${badgeLicence(response)}
-    ## Description
-    ${response.description}
-    ## Table of Contents:
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    ## Installation
-    ${response.install}
-    ## Usage
-    ${response.usage}
-    ## Credits
-    ${response.credits}
-    ## Test
-    ${response.test}
-    ## License
-    ${response.licence}
-    ## Questions
-    ### Please reach out with any questions you may have! 
-    ### Here are some ways you can connect with me:
-    ### GitHub: [${response.username}](https://github.com/${response.username})
-    ### Email: <${response.email}>`;
+const createReadme = (response) => `
+# ${response.title}
+${badgeLicence(response)}
+## Description
+${response.description}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
+## Installation
+${response.install}
+## Usage
+${response.usage}
+## Contributing
+${response.credits}
+## Tests
+${response.test}
+## License
+This project is using the ${response.licence} licence. For further information, please visit [here](https://choosealicense.com/licenses/).
+## Questions
+Please reach out with any questions you may have! 
+Here are some ways you can connect with me:  
+GitHub: [${response.username}](https://github.com/${response.username})  
+Email: <${response.email}>`;
 
 function init() {
     questions()
