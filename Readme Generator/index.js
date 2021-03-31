@@ -1,7 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-// TODO: Create an array of questions for user input
+// Function that will run questions in the terminal
 const questions = () => {
     return inquirer
         .prompt([
@@ -56,6 +56,7 @@ const questions = () => {
         ])
 }
 
+// Function that takes the licence response and pulls the corresponding license badge
 const badgeLicence = (response) => {
     
     var badge;
@@ -87,6 +88,7 @@ const badgeLicence = (response) => {
     return badge;
 };
 
+// Function that creates the content for the Readme file using template literal
 const createReadme = (response) => `
 # ${response.title}
 ${badgeLicence(response)}
@@ -115,6 +117,7 @@ Here are some ways you can connect with me:
 GitHub: [${response.username}](https://github.com/${response.username})  
 Email: <${response.email}>`;
 
+// Function runs all the questions, then takes the response and writes a readme file.
 function init() {
     questions()
     .then((response) => fs.writeFile('Readme.md', createReadme(response), (err) =>
