@@ -1,7 +1,8 @@
+// Import requirements
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-// Function that will run questions in the terminal
+// Function that runs questions in the terminal
 const questions = () => {
     return inquirer
         .prompt([

@@ -1,37 +1,38 @@
 # Readme File Generator
 
-## What is the project?
+## Project Description
 
-This project is a readme file generator using only JavaScript.
-
-## Why did I decide to do this project?
-
-This project is great as it automates and simplifies a sometimes very mundane task of writing readme files. It was very interesting to see how I could put some of the code I've learned to practice and create something useful.
-
-## What I learned in the process?
-
-I became a lot more comfortable with inquirer and with passing in values into functions.
-
-## What makes this project stand out?
-
-This project is a great example of simple yet very effective readme generator.
+This project is a readme file generator using only JavaScript. The user runs through a series of questions resulting in a complete Readme.md file.
 
 ## Project Video  
 
 You can see a video demo of the project here: [Readme Generator Video](https://youtu.be/rr6t8UnhaAo)
+
+## Background
+
+This project is great as it automates and simplifies a sometimes very mundane task of writing Readme files. It was very interesting to see how I could put some of the code I've learned to practice and create something useful.
+
+## Learnings
+
+I became a lot more comfortable with **inquirer** and with passing in values into functions.
  
+## Installation
 
-## Instalation
+This project is ran exclusively in the command line interface. Save this project to your local computer. Navigate your CLI inside the **Readme Generator** folder  and install all necessary dependencies by typing:
 
-This project is ran exclusively in Terminal. Save project to local computer. Navigate your Terminal inside the folder where you've saved this project. Type "node index" in your Terminal and press the Enter button to launch program.
+```npm i``` 
+
+After they are done isntalling, to run the application, type:
+
+```node index```
 
 ## Usage
 
-This program fully runs inside of Terminal. When you run the program, your Terminal will prent you with a set of questions which you must answer. After answering all questions, if the program runs into an error, it will log an error in the console. If everyone runs successfully, the console will log and successful message.
+When you run the program, your Terminal will present you with a set of questions which you must answer. After answering all of the questions, if the program runs into an error, it will log an error in the console. If everything successfully runs, the console will log a success message and you will see your generated Readme file in the **Readme Generator** folder.
 
 ## Credits
 
-Thank you to Columbia's Full-Stack Web Developer bootcamp for all the assistance and for teaching me all that I have learned. Credit also goes to Google for helping me find any needed resource.
+Thank you to Columbia's Full-Stack Web Developer bootcamp for all the assistance and for teaching me all that I have learned.
 
 ## Licence
 
