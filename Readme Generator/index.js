@@ -2,7 +2,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-// Function that runs questions in the terminal
+// Runs questions in the terminal
 const questions = () => {
     return inquirer
         .prompt([
@@ -57,7 +57,7 @@ const questions = () => {
         ])
 }
 
-// Function that takes the licence response and pulls the corresponding license badge
+// Takes the licence response and pulls the corresponding license badge
 const badgeLicence = (response) => {
     
     var badge;
@@ -89,7 +89,7 @@ const badgeLicence = (response) => {
     return badge;
 };
 
-// Function that creates the content for the Readme file using template literal
+// Creates the content for the Readme file using template literal
 const createReadme = (response) => `
 # ${response.title}
 ${badgeLicence(response)}
@@ -118,7 +118,7 @@ Here are some ways you can connect with me:
 GitHub: [${response.username}](https://github.com/${response.username})  
 Email: <${response.email}>`;
 
-// Function runs all the questions, then takes the response and writes a readme file.
+// Runs all the questions, then takes the response and writes a readme file.
 function init() {
     questions()
     .then((response) => fs.writeFile('Readme.md', createReadme(response), (err) =>
